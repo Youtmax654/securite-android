@@ -12,7 +12,7 @@
 
 ## Comment avons-nous procéder
 
-Exécuter les commandes suivantes selon l'emplacement des fichiers :
+Exécuter la commande suivante selon l'emplacement des fichiers :
 
 ```
 unzip app.apk classes.dex AndroidManifest.xml -d app
