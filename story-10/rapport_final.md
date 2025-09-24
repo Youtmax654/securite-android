@@ -18,7 +18,7 @@ L'analyse de sécurité de l'application Android révèle plusieurs vulnérabili
 
 ## MÉTHODOLOGIE
 
-L'audit a été réalisé selon une approche structurée en 7 étapes :
+L'audit a été réalisé selon une approche structurée en 9 étapes :
 
 1. **Vérification d'intégrité** - Validation du hash SHA256
 2. **Analyse automatisée** - Scan MobSF pour identification rapide
@@ -27,6 +27,8 @@ L'audit a été réalisé selon une approche structurée en 7 étapes :
 5. **Analyse des chaînes** - Recherche de secrets dans strings.xml
 6. **Analyse de code** - Décompilation du bytecode avec Jadx
 7. **Recompilation** - Validation de la réversibilité
+8. **Signature de l'APK** - Signature avec clés de test pour validation
+9. **Test Firebase** - Vérification d'accès public à la base de données
 
 ---
 
@@ -90,6 +92,14 @@ sQLiteDatabase.rawQuery("Select * from inApps where code='" + str + "';", null);
 **Impact** : Exposition aux vulnérabilités système anciennes  
 **Recommandation** : Définir minSdkVersion ≥ 23 (Android 6.0)
 
+### 🟢 FAIBLE - Base Firebase sécurisée
+
+**Localisation** : `https://application-client-nickel.firebaseio.com/`  
+**Description** : Test d'accès public à la base Firebase  
+**Résultat** : `{"error" : "Permission denied"}`  
+**Impact** : Accès correctement restreint  
+**Recommandation** : Maintenir les règles de sécurité Firebase actuelles
+
 ---
 
 ## PREUVES TECHNIQUES
@@ -104,9 +114,16 @@ SHA256: f01f08c8b6e2fe4612e81bc7e3a3ba9440dad0d7a962f4e67640390dd721d528
 - `AndroidManifest.xml` - Configuration et permissions
 - `app_src/` - Code source décompilé (Apktool)
 
-### Recompilation
+### Recompilation et signature
 - `app_unsigned.apk` - APK recompilé avec succès
 - `apktool_build.log` - Log de construction sans erreurs
+- `rebuilt_signed.apk` - APK signé avec clés de test
+- `app_keystore.jks` - Keystore généré pour signature
+- Validation signature avec `apksigner verify`
+
+### Tests de sécurité externes
+- **Firebase** : Test d'accès public - `Permission denied` (sécurisé)
+- **Endpoints API** : URLs bancaires exposées mais protection côté serveur présumée
 
 ---
 
