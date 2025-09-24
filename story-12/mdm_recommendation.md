@@ -234,8 +234,3 @@ Suite à l'audit de sécurité mobile réalisé (stories 1-11), l'organisation a
 Microsoft Intune représente le choix optimal pour l'organisation, offrant le meilleur équilibre entre sécurité, fonctionnalités et coût. Sa capacité à adresser directement les vulnérabilités identifiées lors de l'audit de sécurité mobile, combinée à son intégration native avec l'infrastructure existante, en fait la solution recommandée.
 
 **Décision recommandée** : Déploiement de Microsoft Intune avec budget de €144,000 sur 3 ans.
-
----
-
-*Analyse réalisée par l'équipe d'architecture sécurité - Septembre 2024*  
-*Basée sur l'audit de sécurité mobile (stories 1-11)*
