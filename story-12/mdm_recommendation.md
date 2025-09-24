@@ -199,8 +199,3 @@ Suite à l'audit de sécurité Android réalisé (stories 1-11), l'entreprise do
 Samsung Knox Suite est la solution optimale pour sécuriser la flotte Android de l'entreprise. Son score supérieur (92%) et sa capacité à adresser spécifiquement les vulnérabilités Android identifiées dans notre audit justifient l'investissement de €144,000 sur 3 ans.
 
 **Décision recommandée** : Déploiement immédiat de Samsung Knox Suite pour 500 devices Android.
-
----
-
-*Analyse MDM Android - Septembre 2024*  
-*Basée sur l'audit de sécurité mobile stories 1-11*
