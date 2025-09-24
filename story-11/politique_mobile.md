@@ -2,7 +2,7 @@
 
 ## 1. OBJECTIF ET PÉRIMÈTRE
 
-Cette politique définit les exigences de sécurité pour toutes les applications mobiles de l'organisation, basée sur l'audit réalisé (stories 1-10) et les standards OWASP Mobile Top 10.
+Cette politique définit les exigences de sécurité pour toutes les applications mobiles de l'organisation, basée sur les standards OWASP Mobile Top 10 et les stories précédentes.
 
 ---
 
@@ -101,17 +101,3 @@ Avant chaque déploiement :
 - [ ] minSdkVersion ≥ 23
 - [ ] Score MobSF ≥ 80/100
 - [ ] Tests de sécurité validés
-
----
-
-## 7. CONTACTS D'URGENCE
-
-- **Sécurité** : security@company.com
-- **Incidents 24/7** : incident@company.com
-- **DevSecOps** : devsecops@company.com
-
----
-
-**Version** : 1.0 | **Révision** : Annuelle | **Approuvé par** : Responsable Sécurité
-
-*Politique basée sur l'audit de sécurité mobile (stories 1-10) et standards OWASP*
