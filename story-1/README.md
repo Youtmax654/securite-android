@@ -15,12 +15,12 @@
 Pour récupérer le hash du fichier app.apk, il faut lancer une commande dans son terminal :
 
 ```
-sah256sum app.apk
+sha256sum app.apk
 ```
 
 ## Windows
 
-Pour Windows, la commande est le suivant :
+Pour Windows, la commande est la suivante :
 
 ```
 Get-FileHash app.apk
